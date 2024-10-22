@@ -1,0 +1,92 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0304
+header_name {.h}
+code_name {.cpp}
+class Gui {open
+} {
+  Function {Gui()} {open
+  } {
+    Fl_Window MainWindow {
+      label {Scientific Visualization Projects} open
+      xywh {26 501 985 554} type Double
+      code0 {\#include "Application.h"}
+      code1 {\#include <stdlib.h>} visible
+    } {
+      Fl_Menu_Bar menuBar {
+        label menuBar open
+        xywh {0 0 985 25}
+      } {
+        Submenu fileMenu {
+          label File
+          xywh {0 0 100 20}
+        } {
+          MenuItem readFile {
+            label Read
+            callback {app->ReadFile();}
+            xywh {0 0 100 20}
+          }
+          MenuItem writeFile {
+            label Write
+            callback {app->WriteFile();}
+            xywh {0 0 100 20}
+          }
+        }
+        Submenu ImageProcess {
+          label {Image Processing}
+          xywh {0 0 62 20}
+        } {
+          MenuItem Update {
+            label Update
+            xywh {0 0 30 20}
+          }
+          MenuItem AverageSmooth {
+            label {Average Smooth}
+            xywh {0 0 30 20}
+          }
+          MenuItem MedianSmooth {
+            label {Median Smooth}
+            xywh {0 0 30 20}
+          }
+          MenuItem GaussianSmooth {
+            label {Gaussian Smooth}
+            xywh {0 0 30 20}
+          }
+          MenuItem EdgeDetect {
+            label {Edge Detect}
+            xywh {0 0 30 20}
+          }
+          MenuItem Undo {
+            label Undo
+            xywh {0 0 30 20}
+          }
+        }
+        MenuItem exitButton {
+          label Exit
+          callback {exit(1);}
+          xywh {10 10 100 20} labelcolor 1
+        }
+      }
+      Fl_Box EditorWindow {
+        label EditorWindow
+        xywh {15 25 385 350}
+        code0 {\#include "EditorWindow.h"}
+        class CEditorWindow
+      }
+      Fl_Box DisplayWindow {
+        label DisplayWindow
+        xywh {415 25 570 530}
+        code0 {\#include "DisplayWindow.h"}
+        class CDisplayWindow
+      }
+    }
+    code {app=new Application();} {}
+  }
+  Function {show()} {open
+  } {
+    code {MainWindow->show();
+EditorWindow->show();
+DisplayWindow->show();} {}
+  }
+  decl {Application *app;} {public local
+  }
+}

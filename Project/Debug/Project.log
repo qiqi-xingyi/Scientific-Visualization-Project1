@@ -1,0 +1,14 @@
+﻿  Application.cpp
+E:\Course_project\SV_project1\project\Project\Application.cpp(44,8): warning C4101: 'dummy': unreferenced local variable
+E:\Course_project\SV_project1\project\Project\Application.cpp(45,10): warning C4101: 'j': unreferenced local variable
+E:\Course_project\SV_project1\project\Project\Application.cpp(45,8): warning C4101: 'i': unreferenced local variable
+E:\Course_project\SV_project1\project\Project\Application.cpp(153,9): warning C4101: 'imageType': unreferenced local variable
+E:\Course_project\SV_project1\project\Project\Application.cpp(154,8): warning C4101: 'dummy': unreferenced local variable
+E:\Course_project\SV_project1\project\Project\Application.cpp(153,22): warning C4101: 'str': unreferenced local variable
+  DisplayWindow.cpp
+  EditorWindow.cpp
+E:\Course_project\SV_project1\project\Project\EditorWindow.cpp(40,10): warning C4101: 'j': unreferenced local variable
+  gui.cpp
+  Main.cpp
+  Generating Code...
+  Project.vcxproj -> E:\Course_project\SV_project1\project\Project\Debug\Project.exe
